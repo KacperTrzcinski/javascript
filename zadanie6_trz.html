@@ -1,0 +1,59 @@
+
+<html>
+<head>
+    <title>trzcinski 3G</title>
+</head>
+
+<style>
+    .pyt {
+        font-weight: bold;
+    }
+</style>
+
+<script>
+    function okno_zamknij_trzcinski(){
+        window.close()
+    }
+</script>
+<body>
+    <span class="pyt">1) Rodzaje okienek</span>
+    <ol style="list-style-type: '- ';">
+        <li>Okienko alert - wyświetla okienko dialogowe z informacją i przyciskiem OK</li>
+        <li>Okienko prompt - generuje okno, w którym użytkownik może wpisać wartość, zwracaną następnie do programu</li>
+        <li>Okienko confirm - sluży do tego, aby użytkownik coś potwierdził</li>
+    </ol><br>
+
+    <span class="pyt">2) Konwersji zmiennych</span>
+    <span>Wczytanie zmiennej z użyciem prompt wykonywane jest jako ciąg znaków dlatego konieczna jest konwersji z ciągu znaków na wartości liczbowe aby wykonywac obliczenia</span><br>
+    <span><u>parseFloat(zmienna)</u> - konwersja zmiennej do typu float</span><br>
+    <span><u>parseInt(zmienna</u> - konwersja zmiennej do typu int (liczbowego)</span><br>
+    <span><u>oString(zmienna</u> - konwersja zmiennej do typu łańcuchowego</span><br><br><br>
+
+    <span class="pyt">3) Przy nadawaniu nazw zmiennym należy przestrzegać pewnych zasad:</span><br>
+    <ol>
+        <li>Nazwa zmiennej musi się zaczynać od litery, znaku "$" lub "_", może zawierać tylko litery (bez polskich znaków), cyfry oraz "$" i "_". <br>
+            <u>Poprawne nazwy zmiennych</u>: zmienna1, $wynik, _rozmiar, wynik1, Rekord, $_gracz<br>
+            <u>Błędne nazwy zmiennych</u>: 1zmienna, wynik gry, wysokosc&szerokosc, wynik.rekord, &gracz, wysokość, imie+nazwisko</li><br>
+        <li>Wielkość liter ma znaczenie<br>
+        <u>Rekord i rekord</u> to dwie różne zmienne! Jest to bardzo częsta przyczyna błędów w kodzie początkujących programistów.</li><br>
+        <li>Należy nie używać słów kluczowych JavaScript jako nazw zmiennych</li>
+    </ol><br>
+
+    <span class="pyt">4) Omów typy zmiennych w Javascript:</span><br>
+    <span>- W JavaScript nie ma możliwości definiowania różnych typów zmiennych tak jak w C++, typy zmiennych są definiowane w trakcie ich przypisywania<br>
+    Podstawowe zmienne liczbowe w JavaScript to:</span><br>
+    <ol style="list-style-type: '- ';">
+        <li>Number -> typ liczboy<br><ul>
+            <li>zmienno całkowite</li>
+            <li>zmiennoprzecinkowe </li>
+        </ul></li>
+        <li>String -> Typ tekstowy</li>
+        <li>Boolean -> Typ logiczny</li>
+        <li>Null -> Pusta zawartości</li>
+        <li>Undefinded -> typ niezidentyfikowany</li>
+        <li>Object -> Obiekt</li>
+    </ol>
+
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_trzcinski()"/>
+    </body>
+</html>
