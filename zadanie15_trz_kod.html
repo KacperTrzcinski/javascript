@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div style="color:green;font-size:50px;">
+        <script language="JavaScript">
+            var a_trz=prompt("A=","");
+            var b_trz=prompt("B=","");
+            var a = parseFloat(a_trz);
+            var b = parseFloat(b_trz);
+            var wynik1_trz = a*a*a;
+            var wynik2_trz = 3*(a*a*b);
+            var wynik3_trz = 3*(a*b*b);
+            var wynik4_trz = b*b*b;
+            var wynik_trz = wynik1_trz + wynik2_trz + wynik3_trz + wynik4_trz;
+            document.write("(" + a + " + " + b + ")³ = " + a + "³ + 3*" + a + "²*" + b + " + 3*" + a + "*" + b + "² + " + b + "³ = " + wynik1_trz + " + " + wynik2_trz + " + " + wynik3_trz + " + " + wynik4_trz + " = " + wynik_trz);
+
+            function okno_zamknij_trzcinski(){
+                window.close();
+            }
+        </script>
+    </div>
+
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_trzcinski()"/>
+</body>
+</html>
