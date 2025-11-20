@@ -1,0 +1,39 @@
+<html>
+<head>
+    <script language="JavaScript">
+    function drabina_trzcinski(){
+        var d_trz = parseFloat(document.getElementsByName('d')[0].value);
+        var x_trz = parseFloat(document.getElementsByName('x')[0].value);
+
+        drabina_trz = Math.sqrt(Math.pow(d_trz, 2) + Math.pow(x_trz, 2));
+
+        alert("Drabina = " + drabina_trz.toFixed(2) + " cm");
+        document.getElementsByName('drabina')[0].value = drabina_trz.toFixed(2);
+    }
+
+    function alfa_trzcinski(){
+        var d_trz = parseFloat(document.getElementsByName('d')[0].value);
+        var x_trz = parseFloat(document.getElementsByName('x')[0].value);
+
+        var sin_alfa_trz = d_trz/drabina_trz;
+        var alfa_trz = (Math.asin(sin_alfa_trz)) * 180 / Math.PI;
+
+        alert("Alfa = " + alfa_trz.toFixed(2));
+        document.getElementsByName('alfa')[0].value = alfa_trz.toFixed(2);
+    }
+    </script>
+</head>
+<body>
+    <form name="formularz" onsubmit="drabina_trzcinski(); alfa_trzcinski(); return false">
+            Podaj d=
+        <input size="6" name="d" id="input_d">
+            Podaj x=
+        <input size="6" name="x" id="input_x"><br><br>
+        <input TYPE="submit" Value="oblicz"><br><br>
+            Drabina=
+        <input size="6" name="drabina"><br>
+            Alfa=
+        <input size="6" name="alfa">
+    </form>
+</body>
+</html>

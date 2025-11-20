@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Teoria DOM - Zadanie</title>
+<style>
+    .odpowiedz {
+        border: 1px solid black;
+        padding: 10px;
+        margin-top: 10px;
+        font-family: Arial;
+    }
+</style>
+</head>
+<body>
+
+<h2>Odpowiedzi teoretyczne (po kliknięciu)</h2>
+
+<button onclick="pytanie1()">Pytanie 1</button>
+<button onclick="pytanie2()">Pytanie 2</button>
+<button onclick="pytanie3()">Pytanie 3</button>
+<button onclick="pytanie4()">Pytanie 4</button>
+<button onclick="wyczysc()">return</button>
+
+<div id="wynik" class="odpowiedz"></div>
+
+<script>
+function pytanie1() {
+    document.getElementById("wynik").innerHTML =
+        "<b>1. Wymień cztery sposoby wyprowadzania danych w JS:</b><br>" +
+        "<b><u>Odpowiedź:</u></b><br>" +
+        "• z użyciem <b><u>document.write()</u></b><br>" +
+        "• z użyciem <b><u>alert()</u></b><br>" +
+        "• do pól formularza (np. input.value)<br>" +
+        "• do elementów HTML poprzez <b><u>innerHTML</u></b><br>";
+}
+
+function pytanie2() {
+    document.getElementById("wynik").innerHTML =
+        "<b>2. Czym jest funkcja w JS?</b><br>" +
+        "<b><u>Odpowiedź:</u></b><br>" +
+        "1) <u>Grupa instrukcji</u> wykonywanych po jej wywołaniu,<br>" +
+        "2) <u>Uruchamiana przez podanie jej nazwy</u> (np. test()),<br>" +
+        "3) <u>Może przyjmować argumenty</u> (np. f(a,b)),<br>" +
+        "4) <u>Może zwracać wartość</u> przez return.<br>";
+}
+
+function pytanie3() {
+    document.getElementById("wynik").innerHTML =
+        "<b>3. Omów metody pobierania elementów:</b><br>" +
+        "<table border='1' cellpadding='5'>" +
+        "<tr><th>Metoda</th><th>Opis</th></tr>" +
+        "<tr><td><b><u>getElementById</u></b></td><td>Dostęp do <u>jednego</u> konkretnego elementu po jego unikalnym id</td></tr>" +
+        "<tr><td><b><u>getElementsByTagName</u></b></td><td>Dostęp do <u>wszystkich elementów danego znacznika</u> (lista)</td></tr>" +
+        "<tr><td><b><u>getElementsByName</u></b></td><td>Dostęp do elementów po atrybucie <u>name</u></td></tr>" +
+        "</table>";
+}
+
+function pytanie4() {
+    document.getElementById("wynik").innerHTML =
+        "<b>4. Właściwości elementów DOM:</b><br><br>" +
+        "<b><u>innerHTML</u></b> – umożliwia wstawianie oraz odczyt <u>kodu HTML</u> wewnątrz elementu.<br>" +
+        "<b><u>innerText</u></b> – umożliwia wstawienie <u>czystego tekstu</u> (bez HTML).<br>" +
+        "<b><u>className</u></b> – umożliwia ustawienie <u>klasy CSS</u> odpowiedzialnej za wygląd elementu.<br>";
+}
+function wyczysc() {
+    document.getElementById("wynik").innerHTML = "";
+}
+</script>
+
+</body>
+</html>

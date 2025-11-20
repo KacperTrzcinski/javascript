@@ -1,0 +1,55 @@
+<html>
+<body>
+<textarea cols="100" rows="54">
+<html>
+<head>
+    <title>trzcinski 3G</title>
+</head>
+﻿
+</body>
+    <p>xa: <input type="text" id="xa"></p>
+    <p>ya: <input type="text" id="ya"></p>
+    <p>xb: <input type="text" id="xb"></p>
+    <p>yb: <input type="text" id="yb"></p>
+    <p>xc: <input type="text" id="xc"></p>
+    <p>yc: <input type="text" id="yc"></p>
+
+    <input type="button" value="Oblicz AB" onclick="AB_trz()"><br><br>
+    <input type="button" value="Oblicz BC" onclick="BC_trz()"><br><br>
+    <input type="button" value="Oblicz AC" onclick="AC_trz()"><br><br>
+
+    <div style="color:red;font-size:30px;" id="nazwa"></div>
+
+    <script>
+        function AB_trz(){
+            var xa = parseFloat(document.getElementById('xa').value);
+            var ya = parseFloat(document.getElementById('ya').value);
+            var xb = parseFloat(document.getElementById('xb').value);
+            var yb = parseFloat(document.getElementById('yb').value);
+            var ab = Math.sqrt(Math.pow(xa - xb, 2) + Math.pow(ya - yb, 2));
+            document.getElementById("nazwa").innerHTML = "|AB| = " + ab.toFixed(2);
+        }
+
+        function BC_trz(){
+            var xb = parseFloat(document.getElementById('xb').value);
+            var yb = parseFloat(document.getElementById('yb').value);
+            var xc = parseFloat(document.getElementById('xc').value);
+            var yc = parseFloat(document.getElementById('yc').value);
+            var bc = Math.sqrt(Math.pow(xb - xc, 2) + Math.pow(yb - yc, 2));
+            document.getElementById("nazwa").innerHTML = "|BC| = " + bc.toFixed(2);
+        }
+
+        function AC_trz(){
+            var xa = parseFloat(document.getElementById('xa').value);
+            var ya = parseFloat(document.getElementById('ya').value);
+            var xc = parseFloat(document.getElementById('xc').value);
+            var yc = parseFloat(document.getElementById('yc').value);
+            var ac = Math.sqrt(Math.pow(xa - xc, 2) + Math.pow(ya - yc, 2));
+            document.getElementById("nazwa").innerHTML = "|AC| = " + ac.toFixed(2);
+        }
+    </script>
+﻿
+</html>
+</textarea>
+</body>
+</html>

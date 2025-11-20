@@ -1,0 +1,52 @@
+
+<html>
+<body>
+<textarea cols="100" rows="46">
+<html>
+<head>
+    <title>Obliczanie Pola i obwodu prostokąta</title>
+    <script language="JavaScript">
+    function Pole_trzcinski(a_trz,b_trz){
+        a_liczba = parseFloat(a_trz);
+        b_liczba = parseFloat(b_trz);
+        Pole_wynik = a_liczba*b_liczba;
+        document.getElementsByName('pole')[0].value=Pole_wynik.toFixed(2); /* na dokument */
+        alert("Pole="+Pole_wynik.toFixed(2)+" cm^2"); /*do okna Alert */
+        pokaz1.innerHTML="Pole="+Pole_wynik.toFixed(2)+" cm^2"+"<br>"; /* do tabeli */
+    }
+
+    function Obw_trzcinski(a_trz, b_trz){
+        a_liczba = parseFloat(a_trz);
+        b_liczba = parseFloat(b_trz);
+        Obw_wynik = 2*(a_liczba+b_liczba);
+        document.getElementsByName('obw')[0].value=Obw_wynik.toFixed(2); /* na dokument */
+        alert("Obwod="+Obw_wynik.toFixed(2)+" cm"); /*do okna Alert */
+        pokaz2.innerHTML="Obwod="+Obw_wynik.toFixed(2)+" cm"+"<br>"; /* do tabeli */
+    }
+    </script>
+</head>
+<body>
+    Obliczanie Pola i obwodu prostokąta<br><br>
+    <form name="formularz" onsubmit="Obw_trzcinski(this.a.value,this.b.value);
+        Pole_trzcinski(this.a.value,this.b.value);return false">
+            Podaj a=
+        <input size="6" name="a">
+            Podaj b=
+        <input size="6" name="b"><br><br>
+        <input TYPE="submit" Value="oblicz"><br><br>
+            Pole=
+        <input size="6" name="pole"><br>
+            Obwód=
+        <input size="6" name="obw">
+    </form>
+
+    <table>
+        <tr id="pokaz1"></tr>
+        <tr id="pokaz2"></tr>
+    </table>
+</body>
+</html>
+
+</textarea>
+</body>
+</html>

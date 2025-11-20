@@ -1,0 +1,33 @@
+
+<html>
+<body>
+<textarea cols="100" rows="26">
+<html>
+<head>
+    <script language="JavaScript">
+        var x1_trz = parseFloat(prompt("x1_trz=","")); 
+        var x2_trz = parseFloat(prompt("x2_trz=","")); 
+        
+        var rad_x1_trz = (x1_trz*Math.PI)/180;
+        document.write("x1 = " + x1_trz + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "x2 = " + x2_trz + "<br>");
+        document.write("x1 = " + x1_trz + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "x1 = " + rad_x1_trz.toFixed(2) + "<br>");
+
+        var y1_trz = 3*Math.pow(x1_trz, 2/3);
+        document.write("y1 = " + y1_trz.toFixed(2) + "<br>");
+
+        var y2_trz = 2*Math.cos(rad_x1_trz) + 3*Math.sin(rad_x1_trz);
+        document.write("y2 = " + y2_trz.toFixed(2) + "<br>");
+
+        var akuku = Math.pow(x1_trz,5) + 2*Math.pow(x2_trz, 4);
+        var y3_trz = Math.pow(akuku, 1/3)*Math.abs(x1_trz-x2_trz);
+        document.write("y3 = " + y3_trz.toFixed(2) + "<br>");
+    </script>
+</head>
+<body>
+</body>
+</html>
+
+</textarea>
+</body>
+</html>
+ 
