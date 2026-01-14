@@ -1,0 +1,37 @@
+<html>
+<head>
+    <script type="text/javascript">
+        var Autobus = {
+            linia: '175',
+            marka: 'Solaris',
+            paliwo: 'elektryczny',
+            autobus_pokaz_trzcinski: function (){
+                document.write(
+                    "Marka: " + this.marka + "<br>" +
+                    "Linia: " + this.linia + "<br>" +
+                    "Napęd: " + this.paliwo
+                );
+            }
+        }
+
+        Autobus.autobus_pokaz_trzcinski();
+        Autobus.miejsca = 90;
+        Autobus.wypisz = function() {
+            alert('Liczba miejsc: ' + this.miejsca);
+        }
+        Autobus.wypisz();
+    </script>
+</head>
+<body>
+    <br>
+    Programowanie obiektowe. <br>
+    Obiekt to autobus<br>
+    Pola:<br>
+    linia<br>
+    marka<br>
+    paliwo<br>
+    metoda: autobus_pokaz_trzcinski<br>
+    nowe pole to miejsca<br>
+    nowa metoda to wypisz();<br>
+</body>
+</html>
