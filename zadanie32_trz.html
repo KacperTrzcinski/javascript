@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script type="text/javascript">
+    function autobus (linia, marka, paliwo, miejsca) { 
+        this.linia = linia;
+        this.marka = marka;
+        this.paliwo = paliwo;
+        this.miejsca = miejsca;
+    }
+
+    autobus.prototype.wypisz = function () { 
+        alert(this.linia + ' ' + this.marka + ' ' + this.paliwo + ' ' + this.miejsca);
+    };
+
+    var bus1 = new autobus("120", "Solaris", "diesel", "80"); 
+    var bus2 = new autobus("175", "MAN", "elektryczny", "90");
+    var bus3 = new autobus("503", "Mercedes", "hybryda", "100");
+
+    document.write("dostęp do właściwości<br>");
+    document.write("autobus pierwszy " + bus1.linia + " " + bus1.marka + " " + bus1.paliwo + " " + bus1.miejsca + "<br>");
+    document.write("autobus drugi " + bus2.linia + " " + bus2.marka + " " + bus2.paliwo + " " + bus2.miejsca + "<br>");
+    document.write("autobus trzeci " + bus3.linia + " " + bus3.marka + " " + bus3.paliwo + " " + bus3.miejsca + "<br>");
+
+    bus1.wypisz();
+    bus2.wypisz();
+    bus3.wypisz();
+    </script>
+</head>
+<body>
+    <br>
+    programowanie obiektowe
+</body>
+</html>
