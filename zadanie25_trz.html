@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>trzcinski 3G</title>
+</head>
+<body>
+    <div style="color: green; font-size: 28px;">
+        <script>
+            var N0_trz = parseFloat(prompt("N0=",""));
+            var t_trz = parseFloat(prompt("t=",""));
+            var T12_trz = parseFloat(prompt("T1/2=",""));
+
+            var lambda_trz = Math.log(2) / T12_trz;
+            var N_trz = N0_trz * Math.pow(Math.E, -lambda_trz*t_trz);
+
+            document.write("N0=" + N0_trz + "<br>");
+            document.write("t=" + t_trz + "<br>");
+            document.write("T1/2=" + T12_trz + "<br>");
+            document.write("lambda=" + lambda_trz.toFixed(7) + "<br>");
+            document.write("N=" + N_trz.toFixed(7) + "<br>");
+        </script>
+    </div>
+</body>
+</html>
+<!-- Kacper trzcinski 3G -->
