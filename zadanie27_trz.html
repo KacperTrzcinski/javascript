@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trzcinski 3G</title>
+</head>
+<body>
+
+    <script>
+        var odl_trz = parseFloat(prompt("odl=",""));
+        var s_trz = parseFloat(prompt("s=",""));
+        
+        var h_trz = Math.sqrt(s_trz*s_trz - odl_trz*odl_trz)
+        var kat_trz_rad = Math.asin(h_trz/s_trz);
+        var kat_trz = kat_trz_rad * 180 / Math.PI;
+
+        document.write("odl = " + odl_trz + "<br>");
+        document.write("s = " + s_trz + "<br>");
+        document.write("h = " + h_trz.toFixed(2) + "<br>");
+        document.write("kąt = " + kat_trz.toFixed(2) + "° <br>");
+    </script>
+</body>
+</html>
+<!-- Trzcinski 3G -->
