@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>trzcinski 3G</title>
+    
+    <script>
+        var a = parseFloat(prompt("a=",""));
+        var b = parseFloat(prompt("b=",""));
+        var h = parseFloat(prompt("h=",""));
+
+        function Pow_trzcinski(a, b, h) {
+            return ((a + b) / 2) * h;
+        }
+
+        function Obw_trzcinski(a, b, h) {
+            var c = Math.sqrt(Math.pow(Math.abs(b-a)/2, 2) + Math.pow(h, 2));
+            return a + b + 2 * c;
+        }
+
+        var pole_trz = Pow_trzcinski(a, b, h);
+        var obw_trz = Obw_trzcinski(a, b, h);
+        document.write("pole=" + pole_trz.toFixed(2) + "<br>");
+        document.write("obw=" + obw_trz.toFixed(2) + "<br>");
+    </script>
+</head>
+<body>
+</body>
+</html>
+<!-- kacper trzcinski 3G-->
